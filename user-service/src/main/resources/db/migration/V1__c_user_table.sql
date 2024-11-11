@@ -1,9 +1,9 @@
-create sequence user_id_sequence start with 1 increment by 1;
-create sequence user_profile_id_sequence start with 1 increment by 1;
+create sequence user_id_seq start with 1 increment by 1;
+create sequence user_profile_id_seq start with 1 increment by 1;
 
 create table user_profiles
 (
-    user_profile_id bigint      not null default nextval('user_profile_id_sequence'),
+    user_profile_id bigint      not null default nextval('user_profile_id_seq'),
     first_name      varchar(50) not null,
     last_name       varchar(50) not null,
     gender          varchar(20) not null,
@@ -13,7 +13,7 @@ create table user_profiles
 
 create table users
 (
-    user_id               bigint       not null default nextval('user_id_sequence'),
+    user_id               bigint       not null default nextval('user_id_seq'),
     email                 varchar(255) not null,
     contact_no            varchar(50)  not null,
     status                varchar(40)  not null,

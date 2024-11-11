@@ -20,8 +20,8 @@ import java.time.Instant;
 class User {
 
     @Id
-    @SequenceGenerator(name = "users_id_seq_gen", sequenceName = "users_id_seq")
-    @GeneratedValue(generator = "users_id_seq_gen", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "user_id_seq_gen", sequenceName = "user_id_seq", allocationSize = 1)
+    @GeneratedValue(generator = "user_id_seq_gen", strategy = GenerationType.SEQUENCE)
     @Column(name = "user_id")
     private Long id;
 
@@ -54,6 +54,7 @@ class User {
         return new User()
                 .setEmail(request.email())
                 .setContactNo(request.contactNo())
-                .setUserProfile(UserProfile.from(request));
+                .setUserProfile(UserProfile.from(request))
+                .setStatus(Status.PENDING);
     }
 }

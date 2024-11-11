@@ -19,6 +19,7 @@ public class UserService {
 
     private final UserRepository userRepository;
 
+    @Transactional
     public String createUser(CreateUser request) throws EmailAlreadyRegisteredException {
 
         log.info("Create user requested for email: {}", request.email());
@@ -51,9 +52,9 @@ public class UserService {
 
     public UserRead readUserByEmail(String email) throws EmailAlreadyRegisteredException {
 
-        log.info("Read user by id requested for email: {}", email);
+        log.info("Read user by email requested for email: {}", email);
         User user = this.userRepository.findByEmail(email)
-                .orElseThrow(() -> new EmailAlreadyRegisteredException(email));
+                .orElseThrow(() -> new UserNotFoundException(email));
 
         log.trace("User found for email: {}", email);
         return new UserRead(

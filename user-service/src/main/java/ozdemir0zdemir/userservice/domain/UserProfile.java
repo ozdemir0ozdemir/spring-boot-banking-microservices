@@ -14,8 +14,8 @@ import ozdemir0zdemir.userservice.request.CreateUser;
 class UserProfile {
 
     @Id
-    @SequenceGenerator(name = "user_profiles_id_seq_gen", sequenceName = "user_profiles_id_seq")
-    @GeneratedValue(generator = "user_profiles_id_seq_gen", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "user_profile_id_seq_gen", sequenceName = "user_profile_id_seq", allocationSize = 1)
+    @GeneratedValue(generator = "user_profile_id_seq_gen", strategy = GenerationType.SEQUENCE)
     @Column(name = "user_profile_id")
     private Long id;
 

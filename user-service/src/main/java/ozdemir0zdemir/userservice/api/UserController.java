@@ -1,5 +1,6 @@
 package ozdemir0zdemir.userservice.api;
 
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -14,11 +15,12 @@ import java.net.URI;
 record UserController(UserService userService) {
 
     // TODO: Validation
-    @PostMapping
+    @PostMapping( consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<?> createUser(@RequestBody CreateUser request) {
 
         String email = this.userService.createUser(request);
 
+        // TODO: Random id may usefull instead of email
         URI location = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/api/v1/users/{email}")
                 .buildAndExpand(email)
@@ -29,7 +31,7 @@ record UserController(UserService userService) {
     }
 
     // TODO: Validation
-    @GetMapping("/{email}")
+    @GetMapping(path = "/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<UserRead> readUserByEmail(@PathVariable String email) {
 
         UserRead userRead = this.userService.readUserByEmail(email);
