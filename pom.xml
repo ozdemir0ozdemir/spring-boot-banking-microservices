@@ -17,6 +17,7 @@
 
   <modules>
     <module>user-service</module>
+    <module>account-service</module>
   </modules>
 
   <properties>
@@ -75,6 +76,14 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <version>${spring.boot.starter.version}</version>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
       </plugin>
 
     </plugins>

@@ -5,16 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="321e525d-2adb-47e6-99d8-bb30ed192bd2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/account-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/AccountServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/api/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/domain/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/domain/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/domain/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/domain/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/domain/AccountType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/exception/AccountNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/request/CreateAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/response/AccountSummary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/userclient/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/userclient/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/userclient/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/userclient/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/userclient/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account-service/src/main/resources/db/migration/V1__creating_account_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/TransactionServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/domain/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/domain/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/domain/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/domain/TransactionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/domain/TransactionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction-service/src/test/java/ozdemir0zdemir/transactionservice/TransactionServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/infra.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/infra.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/api/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/UserProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/exception/UserNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__c_user_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__c_user_table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +58,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -33,46 +68,87 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2ohNz2k2Iwc01VoUSNQi6y5mpii" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.spring-boot-banking-microservices [clean].executor": "Run",
-    "Maven.spring-boot-banking-microservices [install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ozdemir/Desktop/SpringBootBankingMicroservices/user-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.spring-boot-banking-microservices [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spring-boot-banking-microservices [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AccountServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ozdemir/Desktop/SpringBootBankingMicroservices/account-service/src/main/java/ozdemir0zdemir/accountservice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ozdemir\Desktop\SpringBootBankingMicroservices\account-service\src\main\java\ozdemir0zdemir\accountservice" />
+      <recent name="C:\Users\ozdemir\Desktop\SpringBootBankingMicroservices\account-service\src\main\java\ozdemir0zdemir\accountservice\client" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ozdemir0zdemir.userservice.response" />
+      <recent name="ozdemir0zdemir.transactionservice.domain" />
+      <recent name="ozdemir0zdemir.accountservice.exception" />
       <recent name="ozdemir0zdemir.userservice.exception" />
+      <recent name="ozdemir0zdemir.accountservice.client" />
+      <recent name="ozdemir0zdemir.accountservice.domain" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AccountServiceApplication">
+    <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="account-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ozdemir0zdemir.accountservice.AccountServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="transaction-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ozdemir0zdemir.transactionservice.TransactionServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ozdemir0zdemir.userservice.UserServiceApplication" />
@@ -99,11 +175,21 @@
       <updated>1731318107722</updated>
       <workItem from="1731318109942" duration="116000" />
       <workItem from="1731318238745" duration="7882000" />
-      <workItem from="1731351373476" duration="1980000" />
+      <workItem from="1731351373476" duration="8165000" />
+      <workItem from="1731401228703" duration="123000" />
+      <workItem from="1731401371909" duration="37000" />
+      <workItem from="1731401429291" duration="129000" />
+      <workItem from="1731401571321" duration="18000" />
+      <workItem from="1731401600825" duration="7377000" />
+      <workItem from="1731431112898" duration="5016000" />
+      <workItem from="1731486131063" duration="2568000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

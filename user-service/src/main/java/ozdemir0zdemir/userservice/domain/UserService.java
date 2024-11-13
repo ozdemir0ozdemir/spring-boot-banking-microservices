@@ -36,10 +36,9 @@ public class UserService {
     public UserRead readUserById(Long id) throws UserNotFoundException {
 
         log.info("Read user by id requested for id: {}", id);
-        User user = this.userRepository.findById(id)
-                .orElseThrow(() -> new UserNotFoundException(id));
-
+        User user = throwIfUserIdNotFound(id);
         log.trace("User found for id: {}", id);
+
         return new UserRead(
                 user.getEmail(),
                 user.getContactNo(),
@@ -50,13 +49,12 @@ public class UserService {
         );
     }
 
-    public UserRead readUserByEmail(String email) throws EmailAlreadyRegisteredException {
+    public UserRead readUserByEmail(String email) throws UserNotFoundException {
 
         log.info("Read user by email requested for email: {}", email);
-        User user = this.userRepository.findByEmail(email)
-                .orElseThrow(() -> new UserNotFoundException(email));
-
+        User user = throwIfEmailNotFound(email);
         log.trace("User found for email: {}", email);
+
         return new UserRead(
                 user.getEmail(),
                 user.getContactNo(),
@@ -77,4 +75,16 @@ public class UserService {
                     throw new EmailAlreadyRegisteredException(email);
                 });
     }
+
+    private User throwIfUserIdNotFound(Long id) {
+        return this.userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(id));
+    }
+
+    private User throwIfEmailNotFound(String email) {
+        return this.userRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException(email));
+    }
+
+
 }

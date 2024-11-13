@@ -1,11 +1,47 @@
 name: infrastructure
 
 services:
-  postgres:
+  user-service-db:
     image: postgres:16-alpine
-    container_name: banking_db
+    container_name: user-service-db
     ports:
-      - "5432:5432"
+      - "15432:5432"
+    environment:
+      - "POSTGRES_DB=banking"
+      - "POSTGRES_USER=user"
+      - "POSTGRES_PASSWORD=password"
+      - "PGDATABASE=banking"
+      - "PGUSER=user"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-U user"]
+      interval: 5s
+      retries: 3
+#    volumes:
+#      - "./postgresql/data:/var/lib/postgresql/data"
+
+  account-service-db:
+    image: postgres:16-alpine
+    container_name: account-service-db
+    ports:
+      - "25432:5432"
+    environment:
+      - "POSTGRES_DB=banking"
+      - "POSTGRES_USER=user"
+      - "POSTGRES_PASSWORD=password"
+      - "PGDATABASE=banking"
+      - "PGUSER=user"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-U user"]
+      interval: 5s
+      retries: 3
+#    volumes:
+#      - "./postgresql/data:/var/lib/postgresql/data"
+
+  transaction-service-db:
+    image: postgres:16-alpine
+    container_name: transaction-service-db
+    ports:
+      - "35432:5432"
     environment:
       - "POSTGRES_DB=banking"
       - "POSTGRES_USER=user"
