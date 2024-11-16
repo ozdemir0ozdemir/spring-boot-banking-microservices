@@ -38,7 +38,7 @@ public class TransactionService {
         // return saved transaction number
     }
 
-    public void internalTransaction(List<Transaction> transactions, String transactionNumber) {
+    public void internalTransactions(List<Transaction> transactions, String transactionNumber) {
 
         // For Each Transaction
         // Set Type INTERNAL_TRANSFER
