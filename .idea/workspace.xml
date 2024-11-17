@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="321e525d-2adb-47e6-99d8-bb30ed192bd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/utils/GenderPatternDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/ozdemir0zdemir/userservice/api/UserControllerWebMvcTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/domain/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transaction-service/src/main/java/ozdemir0zdemir/transactionservice/domain/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/userclient/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/src/main/java/ozdemir0zdemir/accountservice/userclient/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/api/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/api/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/api/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/domain/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/request/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/request/CreateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/utils/GenderPatternDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ozdemir0zdemir/userservice/utils/GenderPatternDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/ozdemir0zdemir/userservice/api/UserControllerWebMvcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/ozdemir0zdemir/userservice/api/UserControllerWebMvcTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +51,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "JUnit.UserControllerWebMvcTest.executor": "Run",
+    "JUnit.UserControllerWebMvcTest.readUserByEmailTest.executor": "Run",
     "JUnit.UserControllerWebMvcTest.shouldNotCreateUserFirstnameBlank (1).executor": "Run",
     "JUnit.UserControllerWebMvcTest.shouldNotCreateUserFirstnameBlank.executor": "Run",
     "Maven.spring-boot-banking-microservices [clean].executor": "Run",
@@ -110,7 +109,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerWebMvcTest">
+  <component name="RunManager" selected="JUnit.UserControllerWebMvcTest.readUserByEmailTest">
     <configuration name="UserControllerWebMvcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
@@ -122,6 +121,22 @@
       <option name="PACKAGE_NAME" value="ozdemir0zdemir.userservice.api" />
       <option name="MAIN_CLASS_NAME" value="ozdemir0zdemir.userservice.api.UserControllerWebMvcTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerWebMvcTest.readUserByEmailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ozdemir0zdemir.userservice.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ozdemir0zdemir.userservice.api" />
+      <option name="MAIN_CLASS_NAME" value="ozdemir0zdemir.userservice.api.UserControllerWebMvcTest" />
+      <option name="METHOD_NAME" value="readUserByEmailTest(java.lang.String,int)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,6 +163,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.UserControllerWebMvcTest.readUserByEmailTest" />
       <item itemvalue="JUnit.UserControllerWebMvcTest" />
       <item itemvalue="Spring Boot.AccountServiceApplication" />
       <item itemvalue="Spring Boot.TransactionServiceApplication" />
@@ -155,6 +171,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserControllerWebMvcTest.readUserByEmailTest" />
         <item itemvalue="JUnit.UserControllerWebMvcTest" />
       </list>
     </recent_temporary>
@@ -185,7 +202,8 @@
       <workItem from="1731401600825" duration="7377000" />
       <workItem from="1731431112898" duration="5016000" />
       <workItem from="1731486131063" duration="7201000" />
-      <workItem from="1731782605311" duration="8666000" />
+      <workItem from="1731782605311" duration="9061000" />
+      <workItem from="1731830533262" duration="3919000" />
     </task>
     <servers />
   </component>

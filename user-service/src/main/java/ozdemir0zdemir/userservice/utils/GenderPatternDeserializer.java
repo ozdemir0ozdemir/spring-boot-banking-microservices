@@ -11,10 +11,6 @@ import java.io.IOException;
 
 public class GenderPatternDeserializer extends StdDeserializer<Gender> {
 
-    public GenderPatternDeserializer() {
-        this(null);
-    }
-
     protected GenderPatternDeserializer(Class<Gender> vc) {
         super(vc);
     }

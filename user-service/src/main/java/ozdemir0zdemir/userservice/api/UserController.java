@@ -1,7 +1,6 @@
 package ozdemir0zdemir.userservice.api;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +16,20 @@ import java.net.URI;
 @RequestMapping("api/v1/users")
 record UserController(UserService userService) {
 
+
+    @GetMapping(path = "/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<UserRead> readUserByEmail(
+            @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "must be formatted properly")
+            @PathVariable String email) {
+
+        UserRead response = this.userService.readUserByEmail(email);
+
+        // TODO: inject generic response body
+        return ResponseEntity.ok(response);
+    }
+
     @PostMapping( consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<?> createUser(@Valid @RequestBody CreateUser request) {
+    ResponseEntity<Void> createUser(@Valid @RequestBody CreateUser request) {
 
         String email = this.userService.createUser(request);
 
@@ -29,17 +40,6 @@ record UserController(UserService userService) {
                 .toUri();
 
         return ResponseEntity.created(location).build();
-    }
-
-    @GetMapping(path = "/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<UserRead> readUserByEmail(
-            @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", message = "Email is not properly formatted")
-            @PathVariable String email) {
-
-        UserRead userRead = this.userService.readUserByEmail(email);
-
-        // TODO: inject generic response body
-        return ResponseEntity.ok(userRead);
     }
 
 }

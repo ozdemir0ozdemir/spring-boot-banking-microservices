@@ -12,7 +12,7 @@ public record UserService(UserClient client) {
 
         ResponseEntity<User> response = client.readUserByEmail(email);
         if(response.getStatusCode().is2xxSuccessful()){
-            return Optional.of(response.getBody());
+            return Optional.ofNullable(response.getBody());
         }
 
         return Optional.empty();

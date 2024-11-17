@@ -6,6 +6,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.method.annotation.HandlerMethodValidationException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import ozdemir0zdemir.userservice.exception.EmailAlreadyRegisteredException;
 import ozdemir0zdemir.userservice.exception.UserNotFoundException;
@@ -53,6 +54,28 @@ class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
         return ResponseEntity.status(status).body(problemDetail);
     }
+
+
+    @Override
+    @Nullable
+    protected ResponseEntity<Object> handleHandlerMethodValidationException(HandlerMethodValidationException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(status, "Bad Request");
+
+        Map<String, String> errors = new HashMap<>();
+
+        ex.getAllValidationResults().forEach(parameterValidationResult -> {
+            parameterValidationResult.getResolvableErrors().forEach(err -> {
+                errors.put(parameterValidationResult.getMethodParameter().getParameterName(), err.getDefaultMessage());
+            });
+        });
+
+        problemDetail.setProperty("errors", errors);
+        problemDetail.setType(URI.create("http://localhost:8080/bad-request"));
+
+        return ResponseEntity.status(status).body(problemDetail);
+    }
+
+
 
 
 }
